@@ -1,0 +1,367 @@
+:root {
+    --color1 : #FBBC01;
+}
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family:  cursive;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    padding: 70px 50px 0 50px;
+}
+.section-text {
+    display: block;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+    object-fit: contain;
+    position: relative;
+    
+}
+.section-text::before {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 150px;
+    background: var(--color1);
+    bottom: -5px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+header {
+    width: 100vw;
+    height: 100vh;
+    background: url("images/dvd1.jpg") ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+header::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    display: block;
+    background: rgba(0, 0, 0, 0.5);
+}
+header input {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+    position: fixed;
+}
+header input:checked ~ .menu-icon .menu-line::before {
+    transform: rotate(90deg);
+    top:0
+}
+header input:checked ~ .menu-icon .menu-line::after {
+    transform: rotate(90deg);
+    top:0
+}
+header input:checked ~ .menu-icon .menu-line {
+    transform: rotate(135deg);
+    transition: 0.3s;
+  
+}
+header input:checked ~ .menu-item {
+    right: 0;
+}
+.menu-icon {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    z-index: 1;
+    top: 12px;
+    left: 12px;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu-line {
+    height: 4px;
+    width: 100%;
+    background: var(--color1);
+    position: relative;
+    
+}
+.menu-line::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    background: var(--color1);
+    top: -14px;
+}
+.menu-line::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    background: var(--color1);
+    top: 14px;
+}
+.menu-item {
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: 0.5s;
+    z-index: 10;
+}
+.menu-item li {
+    line-height: 40px;
+}
+.menu-item li a {
+    color: var(--color1)
+}
+.header-text img{
+    padding-top: -200px;
+}
+.header-text {
+    position: absolute;
+
+}
+.header-text h1 {
+    font-size: 50px;
+    color: var(--color1);
+    z-index: 100;
+    margin-bottom: 20px;
+}
+.header-text a {
+    padding: 15px 40px;
+    color: #000;
+    background: var(--color1);
+    border-radius: 50px;
+    font-size: 25px;
+    transition: 0.3s;
+    animation: headerAnimation ;
+    animation-duration: 3s ;
+    animation-iteration-count: infinite;
+    opacity: 0.3;
+}
+@keyframes headerAnimation {
+    0% {
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 1 ;
+    }
+    100% {
+        opacity: 0.4;
+    }
+}
+.header-text a:hover {
+    color: var(--color1);
+    background: transparent;
+    border: 2px solid var(--color1);
+}
+
+.about-item {
+    width: 30%;
+    margin-bottom: 30px;
+}
+.about-item img {
+    width: 50px;
+    float: left;
+    margin-right: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.about-item img:hover {
+    transform: translateY(-13px);
+}
+.about-item p span {
+    font-size: 20px;
+    color: var(--color1);
+}
+.menu {
+    display: flex;
+    background: var(--color1);
+}
+.menu-img {
+    width: 100vw;
+    height: 70vh;
+    background: url("images/damn.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    clip-path: polygon(0 0, 100% 0, 50% 100%, 0% 100%);
+    width: 70%;
+}
+.menu-detail {
+    width: 30%;
+}
+.menu-detail a {
+    background: #000;
+    color: var(--color1);
+    display: block;
+    width: 120px;
+    height: 40px;
+    border-radius: 50px;
+    align-items: center;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 30px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social-icon i {
+    font-size: 35px;
+    margin-right: 30px;
+    transition: 0.5s;
+}
+.social-icon i:hover {
+    transform: translateY(-20px);
+}
+
+.food-item {
+    width: 30%;
+    height: 300px;
+    border: 2px solid var(--color1);
+    overflow: hidden;
+}
+.food-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 2s;
+}
+.food-item img:hover {
+    transform: scale(1.5);
+}
+
+.img-item {
+    width: 25%;
+    height: 200px;
+
+}
+.img-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.img-slider {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: none;
+}
+.img-slider img {
+    width: 60%;
+    height: 400px;
+    object-fit: contain;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.slider-close {
+    position: absolute;
+    top: 10%;
+    right: 20%;
+}
+.slider-close i {
+    font-size: 35px;
+    color: var(--color1);
+    cursor: pointer;
+}
+.slider-btn {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+    top: 50%;
+    padding: 0 50px;
+}
+.slider-btn i {
+    font-size: 35px;
+    color: var(--color1)
+}
+footer {
+    text-align: center;
+    background: #333;
+    color: #fff;
+    margin-top: 50px;
+    padding: 12px 0;
+}
+footer i {
+    color : red
+}
+@media only screen and (max-width:740px)
+{   .container {
+    padding: 30px 20px;
+}
+    .about-item {
+        width: 40%;
+    }
+    .menu {
+        display: none;
+    }
+    .food-item {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .img-item {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}  
+.p {
+    text-indent: 50px;
+    text-align: justify;
+    letter-spacing: 3px;
+  }
