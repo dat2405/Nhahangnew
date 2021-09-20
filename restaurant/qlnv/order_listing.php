@@ -92,7 +92,7 @@ $config_title = "khách hàng";
                     <div class="listing-prop listing-phone"><?=$row['phone']?></div>
                     <div class="listing-prop listing-button">
                         <a href="./order_printing.php?id=<?=$row['id']?>" target="_blank">In</a>&nbsp;|
-                        <a href="./order_listing.php?id=<?=$row['id']?>" onclick ="confirm('Bạn có chắc muốn xóa hóa đơn')">Xóa</a>
+                        <a href="./del_order.php?id=<?=$row['id']?>" onclick ="confirm('Bạn có chắc muốn xóa hóa đơn')">Xóa</a>
                     </div>
                     <div class="listing-prop listing-time"><?=date($row['created_time'])?></div>
                     <div class="clear-both"></div>

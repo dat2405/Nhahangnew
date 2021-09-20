@@ -42,7 +42,6 @@ include '../qlnv/header.php';
         <?php require 'thongketrongngay.php'; ?>
     </form><br>
     <br><br>
-     <center><button style="float:center;width:70px;"><a href="../qlnv/header.php">Quay lại</a></button></center>
      <?php
 } ?>
 </body>

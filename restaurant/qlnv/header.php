@@ -67,11 +67,11 @@ li.dropdown {
                         <div class="menu-heading">Admin Menu</div>
                         <div class="menu-items">
                             <ul>
-                                <li><a href="listTable.php">Quản lý đặt bàn</a></li>
-                                <li><a href="dsNV.php">Quản lý nhân viên</a></li>
+                                <li><a href="../qlnv/listTable.php">Quản lý đặt bàn</a></li>
+                                <li><a href="../qlnv/dsNV.php">Quản lý nhân viên</a></li>
                                 <li><a href="../menu.php">Menu</a></li>
-                                <li><a href="product_listing.php">Quản lý món ăn</a></li>  
-                                <li><a href="order_listing.php">Quản lý hóa đơn</a></li>
+                                <li><a href="../qlnv/product_listing.php">Quản lý món ăn</a></li>  
+                                <li><a href="../qlnv/order_listing.php">Quản lý hóa đơn</a></li>
                                 <li class="dropdown"><a class="dropbtn" href="">Báo cáo thống kê</a>
                                 <div class="dropdown-content">
                                         <a href="../Thongke/bctk.php">Báo cáo theo ngày</a>

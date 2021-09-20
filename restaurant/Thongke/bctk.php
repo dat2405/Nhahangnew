@@ -42,7 +42,6 @@ include '../qlnv/header.php';
         <input type="submit" value="Thống kê" name="next"><br><br>
         <?php require 'thongke.php'; ?>
     </form><br>
-     <center><button style="float:center;width:70px;"><a href="../qlnv/header.php">Quay lại</a></button></center>
      <?php
 } ?>
 </body>
